@@ -20,7 +20,7 @@ public class ShapeCollector {
     return shapeCollector.remove(shape);
     }
     public Shape getFigure(int n) {
-        if (n >= 0 && n<shapeCollector.size()) {
+        if (n >= 0 && n < shapeCollector.size()) {
             return shapeCollector.get(n);
         }
            return null;
