@@ -73,7 +73,6 @@ public class BookDirectoryTestSuite {
     }
     @Test
     void testListBooksWithConditionFragmentShorterThan3() {
-        LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
         List<Book> resultListOf10Book = generateListOfNBook(10);
         when(libraryDatabaseMock.listBooksWithCondition(anyString())).thenReturn(resultListOf10Book);
