@@ -16,18 +16,22 @@ public class ShapeCollector {
         shapeCollector.add(shape);
 
     }
+
     public boolean removeFigure(Shape shape) {
-    return shapeCollector.remove(shape);
+        return shapeCollector.remove(shape);
     }
+
     public Shape getFigure(int n) {
-        if (n >= 0 && n < shapeCollector.size()) {
-            return shapeCollector.get(n);
+        Shape shape1 = null;
+        if (n >= 0 && n < shapeCollector.size())
+            shape1 = shapeCollector.get(n);
+
+        return shape1;
+    }
+
+
+        public void showFigures () {
+            System.out.println(shapeCollector.toString());
         }
-           return null;
-
-
     }
-    public void showFigures() {
-        System.out.println(shapeCollector.toString());
-    }
-}
+

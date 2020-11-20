@@ -71,11 +71,10 @@ public class BookDirectoryTestSuite {
         assertEquals(0, theListOfBook40.size());
 
     }
-    //@Test
+    @Test
     void testListBooksWithConditionFragmentShorterThan3() {
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
         List<Book> resultListOf10Book = generateListOfNBook(10);
-        when(libraryDatabaseMock.listBooksWithCondition(anyString())).thenReturn(resultListOf10Book);
 
         //When
         List<Book> theListOfBooks10 = bookLibrary.listBookswithCondtition("An");

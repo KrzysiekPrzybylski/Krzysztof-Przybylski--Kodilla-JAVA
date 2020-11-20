@@ -76,14 +76,14 @@ public class ShapeCollectorTestSuite {
     @Nested
     @DisplayName("Test get number of existing figure and show figure")
     class TestGetNumberAndShowFigure {
-        //@Test
+        @Test
         public void testGetFigureExistNumber() {
             //Given
             ShapeCollector shapeCollector = new ShapeCollector();
             Shape shape = new Square(5);
 
             //When
-            Shape shapeResult = shapeCollector.getFigure(1);
+            Shape shapeResult = shapeCollector.getFigure(0);
 
             //Then
             Assertions.assertEquals(shape, shapeResult);
