@@ -81,6 +81,7 @@ public class ShapeCollectorTestSuite {
             //Given
             ShapeCollector shapeCollector = new ShapeCollector();
             Shape shape = new Square(5);
+            shapeCollector.addFigure(shape);
 
             //When
             Shape shapeResult = shapeCollector.getFigure(0);
