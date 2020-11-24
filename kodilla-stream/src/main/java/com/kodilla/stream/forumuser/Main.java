@@ -1,5 +1,7 @@
 package com.kodilla.stream.forumuser;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -10,9 +12,9 @@ public class Main {
         Forum forum = new Forum();
 
         List<ForumUser> theResultListOfForum = forum.getUserList().stream()
-                .filter(user -> user.getBirthDate().getYear() > 2000)
-                .filter(user -> user.getPostNumber() >= 1)
-                .filter(user -> user.getSex() == 'M' )
+                .filter(user-> Period.between(user.getBirthDate(), LocalDate.now()).getYears()>=20)
+                .filter(user -> user.getPostNumber() >=1)
+                .filter(user -> user.getSex() == 'M')
                 .collect(Collectors.toList());
 
         Map<Integer,ForumUser> theResultMapOfForum = forum.getUserList().stream()
