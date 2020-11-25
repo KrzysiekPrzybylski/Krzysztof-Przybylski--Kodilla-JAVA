@@ -17,8 +17,7 @@ public class Main {
                 .filter(user -> user.getSex() == 'M')
                 .collect(Collectors.toList());
 
-        Map<Integer,ForumUser> theResultMapOfForum = forum.getUserList().stream()
-                .filter(user -> user.getBirthDate().getYear() > 2000)
+        Map<Integer,ForumUser> theResultMapOfForum = theResultListOfForum.stream()
                 .collect(Collectors.toMap(ForumUser::getUserID, forumUser -> forumUser));
 
 
