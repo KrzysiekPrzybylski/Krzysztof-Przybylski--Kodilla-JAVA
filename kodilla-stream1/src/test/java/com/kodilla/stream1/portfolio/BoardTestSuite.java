@@ -10,6 +10,7 @@ import java.time.Period;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.OptionalDouble;
 
 public class BoardTestSuite {
 
@@ -144,7 +145,15 @@ public class BoardTestSuite {
 
 
 
+
+
         //Then
         assertEquals(10.0, average, 0.0001);
+
+
+
+
     }
+
+
 }
