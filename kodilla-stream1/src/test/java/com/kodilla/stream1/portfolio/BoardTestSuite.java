@@ -141,11 +141,7 @@ public class BoardTestSuite {
                 .map(t -> 1)
                 .reduce (0, (sum,current) -> sum+=current);
 
-        double average = sumOfDays/testQuantity;
-
-
-
-
+        double average = sumOfDays/(double)testQuantity;
 
         //Then
         assertEquals(10.0, average, 0.0001);

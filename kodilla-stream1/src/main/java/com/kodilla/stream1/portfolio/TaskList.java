@@ -29,10 +29,17 @@ public final class TaskList {
     }
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+       if (this == o) return true;
+       if (o == null || getClass() != o.getClass()) return false;
         TaskList taskList = (TaskList) o;
         return name.equals(taskList.name);
+    }
+
+
+
+    @Override
+    public int hashCode() {
+        return 0;
     }
 
     @Override
