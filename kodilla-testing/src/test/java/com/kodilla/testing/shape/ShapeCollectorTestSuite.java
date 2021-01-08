@@ -1,7 +1,6 @@
 package com.kodilla.testing.shape;
 
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.condition.DisabledIfSystemProperties;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +34,7 @@ public class ShapeCollectorTestSuite {
         public void testAddFigure() {
             //Given
             ShapeCollector shapeCollector = new ShapeCollector();
-            Shape shape = new Square(5);
+           Shape shape = new Square(5);
 
             //When
             shapeCollector.addFigure(shape);
@@ -48,7 +47,7 @@ public class ShapeCollectorTestSuite {
         public void testRemoveFigure() {
             //Given
             ShapeCollector shapeCollector = new ShapeCollector();
-            Shape shape = new Square(5);
+           Shape shape = new Square(5);
             shapeCollector.addFigure(shape);
 
             //When
@@ -59,7 +58,7 @@ public class ShapeCollectorTestSuite {
             Assertions.assertEquals(0, shapeCollector.getShapeCollector().size());
         }
 
-        @Test
+       @Test
         public void testRemoveFigureWhichNotExist() {
             //Given
             ShapeCollector shapeCollector = new ShapeCollector();
@@ -106,5 +105,6 @@ public class ShapeCollectorTestSuite {
             Assertions.assertEquals(shapeList.toString(), resultShapeList.toString());
 
         }
+
     }
 }

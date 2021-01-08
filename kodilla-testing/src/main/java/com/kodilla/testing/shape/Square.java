@@ -3,10 +3,10 @@ package com.kodilla.testing.shape;
 public class Square implements Shape {
 
     private final static String name = "Square";
-    private double edgeLenght;
+    private double edgeLength;
 
-    public Square(double edgeLenght) {
-        this.edgeLenght = edgeLenght;
+    public Square(double edgeLength) {
+        this.edgeLength = edgeLength;
     }
 
     @Override
@@ -16,12 +16,12 @@ public class Square implements Shape {
 
         Square square = (Square) o;
 
-        return Double.compare(square.edgeLenght, edgeLenght) == 0;
+        return Double.compare(square.edgeLength, edgeLength) == 0;
     }
 
     @Override
     public int hashCode() {
-        long temp = Double.doubleToLongBits(edgeLenght);
+        long temp = Double.doubleToLongBits(edgeLength);
         return (int) (temp ^ (temp >>> 32));
     }
 
@@ -32,7 +32,7 @@ public class Square implements Shape {
 
     @Override
     public double getField() {
-        return Math.pow(edgeLenght, 2);
+        return Math.pow(edgeLength, 2);
 
     }
 }
