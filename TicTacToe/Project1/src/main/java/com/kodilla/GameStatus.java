@@ -11,14 +11,11 @@ public class GameStatus {
     private Shape[] gameBoard;
     private Shape[] gameBoardHard;
     private int roundNumber;
-
-
-
-
     private boolean endGame;
 
     public GameStatus(Player actualPlayer) {
         this.actualPlayer = actualPlayer;
+
 
         if (actualPlayer instanceof User) {
             this.secondPlayer = new Computer();

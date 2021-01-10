@@ -1,10 +1,13 @@
 package com.kodilla;
 
+import javafx.scene.control.TextField;
+
 public class Statistic {
 
     private int roundNumber;
     private int playerScore;
     private int computerScore;
+    static TextField textFieldName = new TextField();
 
 
     public int getRoundNumber() {

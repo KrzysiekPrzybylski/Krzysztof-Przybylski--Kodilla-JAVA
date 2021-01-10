@@ -14,7 +14,8 @@ import javafx.stage.Stage;
 
 import java.awt.*;
 
-import static com.kodilla.GameMechanics.textFieldName;
+import static com.kodilla.Statistic.textFieldName;
+
 
 public class TicTacToe extends Application {
 

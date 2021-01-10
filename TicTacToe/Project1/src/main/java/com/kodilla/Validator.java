@@ -2,13 +2,6 @@ package com.kodilla;
 
 public class Validator {
 
-//    private final int CIRCLE = 1;
-//    private final int CROSS = 2;
-//
-//    public int checkDidYouWIn(Shape[] gameBoard, Circle circle, Cross cross) {
-//          if()
-//        return
-
 
     public boolean checkDidYouWin(Shape[] gameBoard) {
         return checkFirstRow(gameBoard) || checkSecondRow(gameBoard) || checkThirdRow(gameBoard) ||
