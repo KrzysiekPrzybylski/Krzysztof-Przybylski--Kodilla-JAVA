@@ -12,8 +12,8 @@ public class CheeseFoodShop implements FoodProducer{
 
     }
 
-    private Map<Product, Integer> createProductCheeseList() {
-        Map<Product, Integer> productCheeseList = new HashMap<>();
+    public Map<Product, Integer> createProductCheeseList() {
+        //Map<Product, Integer> productCheeseList = new HashMap<>();
 
         productCheeseList.put(new CheeseProduct("Cottage chesse", "Cow's milk"), 140);
         productCheeseList.put(new CheeseProduct("Camembert","Cow's milk"), 400);
