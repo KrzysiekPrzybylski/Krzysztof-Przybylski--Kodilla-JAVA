@@ -6,4 +6,8 @@ include 'kodilla-exception'
 include 'kodilla-question'
 include 'kodilla-question'
 include 'kodilla-good-patterns'
+include 'kodilla-exception:src:main:kodilla-spring-intro'
+findProject(':kodilla-exception:src:main:kodilla-spring-intro')?.name = 'kodilla-spring-intro'
+include 'kodilla-spring-intro'
+include 'kodilla-spring'
 
