@@ -11,4 +11,5 @@ findProject(':kodilla-exception:src:main:kodilla-spring-intro')?.name = 'kodilla
 include 'kodilla-spring-intro'
 include 'kodilla-spring'
 include 'kodilla-spring-web'
+include 'kodilla-patterns'
 

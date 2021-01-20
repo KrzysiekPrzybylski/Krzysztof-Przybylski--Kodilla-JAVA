@@ -30,7 +30,9 @@ public class BoardConfig {
     }
 
     @Bean
+    @Scope("prototype")
     public TaskList getDoneList() {
         return new TaskList();
     }
+
 }
