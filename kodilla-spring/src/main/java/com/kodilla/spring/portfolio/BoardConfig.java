@@ -10,6 +10,7 @@ import org.springframework.scheduling.config.Task;
 import java.beans.BeanProperty;
 
 @Configuration
+
 public class BoardConfig {
 
 
@@ -17,22 +18,13 @@ public class BoardConfig {
     @Bean
     public Board getBoard() {
 
-        return new Board(getToDoList(), getInProgressList(), getDoneList());
+        return new Board(getTaskList(), getTaskList(), getTaskList());
     }
-
-    @Bean
-    public TaskList getToDoList() {
-        return new TaskList();
-    }
-    @Bean
-    public TaskList getInProgressList() {
-        return new TaskList();
-    }
-
     @Bean
     @Scope("prototype")
-    public TaskList getDoneList() {
+    public TaskList getTaskList() {
         return new TaskList();
+
     }
 
 }
