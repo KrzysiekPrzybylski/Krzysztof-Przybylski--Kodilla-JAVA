@@ -1,0 +1,42 @@
+create table ISSUESLISTS(
+	ID serial primary key,
+    NAME varchar(100)
+);
+commit;
+create table ISSUES(
+	ID serial primary key,
+    ISSUESLIST_ID bigint unsigned not null,
+    SUMMARY varchar(100),
+    DESCRIPTION varchar(1000),
+    USER_ID_ASSIGNEDTO bigint unsigned not null,
+    foreign key(ISSUESLIST_ID) references ISSUESLISTS(ID),
+    foreign key(USER_ID_ASSIGNEDTO) references USERS(ID)
+);
+commit;
+
+insert into issueslists(NAME) values("ToDo");
+insert into issueslists(NAME) values("In progress");
+insert into issueslists(NAME) values("Done");
+commit;
+insert into issues(ISSUESLIST_ID, SUMMARY, DESCRIPTION, USER_ID_ASSIGNEDTO)
+values(1, "powtorka materialu", "powtarzamy caly material", 1);
+insert into issues(ISSUESLIST_ID, SUMMARY, DESCRIPTION, USER_ID_ASSIGNEDTO)
+values(2, "wynajęcie", "wynajęcie pokoju", 3);
+insert into issues(ISSUESLIST_ID, SUMMARY, DESCRIPTION, USER_ID_ASSIGNEDTO)
+values(3, "dzierżawa", "dzierżawa działki", 4);
+insert into issues(ISSUESLIST_ID, SUMMARY, DESCRIPTION, USER_ID_ASSIGNEDTO)
+values(1, "zakup", "kupno auta", 5);
+insert into issues(ISSUESLIST_ID, SUMMARY, DESCRIPTION, USER_ID_ASSIGNEDTO)
+values(2, "sprzedaż", "sprzedaż auta", 7);
+commit;
+insert into issues(ISSUESLIST_ID, SUMMARY, DESCRIPTION, USER_ID_ASSIGNEDTO)
+values(1, "las", "sadzarka", 1);
+insert into issues(ISSUESLIST_ID, SUMMARY, DESCRIPTION, USER_ID_ASSIGNEDTO)
+values(2, "lasek", "przesadzanie", 3);
+insert into issues(ISSUESLIST_ID, SUMMARY, DESCRIPTION, USER_ID_ASSIGNEDTO)
+values(3, "wydzierżawienie", "dzierżawa działki", 4);
+insert into issues(ISSUESLIST_ID, SUMMARY, DESCRIPTION, USER_ID_ASSIGNEDTO)
+values(1, "zakup", "kupno domu", 5);
+insert into issues(ISSUESLIST_ID, SUMMARY, DESCRIPTION, USER_ID_ASSIGNEDTO)
+values(2, "sprzedaż", "sprzedaż doomu", 7);
+commit;
