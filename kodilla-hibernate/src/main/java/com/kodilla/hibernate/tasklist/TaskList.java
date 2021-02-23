@@ -1,21 +1,26 @@
 package com.kodilla.hibernate.tasklist;
 
+import com.kodilla.hibernate.task.Task;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "TASKSLIST")
 public class TaskList {
 
     private int id;
-    private String lastName;
+    private String listName;
     private String description;
+    private List<Task> tasks = new ArrayList<>();
 
     public TaskList() {
     }
 
-    public TaskList(String lastName, String description) {
-        this.lastName = lastName;
+    public TaskList(String listName, String description) {
+        this.listName = listName;
         this.description = description;
     }
     @Id
@@ -28,12 +33,12 @@ public class TaskList {
     public void setId(int id) {
         this.id = id;
     }
-    @Column(name = "LASTNAME")
-    public String getLastName() {
-        return lastName;
+    @Column(name = "LISTNAME")
+    public String getListName() {
+        return listName;
     }
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setListName(String lastName) {
+        this.listName = listName;
     }
     @Column(name = "DESCRIPTION")
     public String getDescription() {
@@ -42,5 +47,19 @@ public class TaskList {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @OneToMany(
+            targetEntity = Task.class,
+            mappedBy = "taskList",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY
+    )
+    public List<Task> getTasks() {
+        return tasks;
+    }
+
+    public void setTasks(List<Task> tasks) {
+        this.tasks = tasks;
     }
 }
