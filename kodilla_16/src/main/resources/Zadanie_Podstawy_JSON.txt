@@ -1,0 +1,22 @@
+{
+	"carsmark":"Bmw",
+	"carsmodel":"e46",
+	"carseats":[{
+		"seatnumber": 1,
+		"fabric":"skin",
+		"color":"blue"
+	},	{
+		"seatnumber": 2,
+		"fabric":"skin",
+		"color":"red"
+	},	{
+		"seatnumber": 3,
+		"fabric":"skin",
+		"color":"black"
+	},	{
+		"seatnumber": 4,
+		"fabric":"skin",
+		"color":"orange"
+	}]
+	"capacity":"3.000"
+      }
