@@ -7,20 +7,19 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name = "BOOK_COPY")
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Builder
-public class BookCopy {
+@Entity
+@Table(name = "BOOK_BORROW")
+public class BookBorrow {
 
     @Id
     @GeneratedValue
     private Long id;
-    private boolean isBorrowed;
     @ManyToOne
-    private Book book;
+    private User user;
     @OneToOne
-    private BookBorrow bookBorrow;
+    private BookCopy bookCopy;
 }
