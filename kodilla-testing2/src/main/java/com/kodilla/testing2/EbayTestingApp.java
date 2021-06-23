@@ -8,11 +8,9 @@ import org.openqa.selenium.WebElement;
 public class EbayTestingApp {
         public static final String EBAYFIELD = "_nkw";
 
-        @SuppressWarnings("SpellCheckingInspection")
         public static void main(String[] args) {
             WebDriver driver = WebDriverConfig.getDriver(WebDriverConfig.CHROME);
             driver.get("https://www.ebay.com");
-
 
             WebElement searchField = driver.findElement(By.name(EBAYFIELD));
             searchField.sendKeys("Laptop");
